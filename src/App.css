@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  /* overflow-y: auto; */
+  overflow-x: hidden;
+}
+
+.title {
+  font-size: 3rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: rgb(0, 7, 61);
+  /* color: white;
+  height: 100vh; */
+  /* overflow-y: auto; */
+}
+
+.top_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.bars {
+  width: 20px;
+}
+.hide {
+  display: none;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  height: 30px;
+  padding: 10px;
+}
+.search input {
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: rgb(238, 238, 238);
+
+  color: white;
+}
+
+.routes {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.link {
+  display: flex;
+  color: white;
+  gap: 10px;
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.link:hover {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+.active {
+  border-right: 4px solid white;
+  background: rgb(45, 51, 89);
+}
+.link_text {
+  white-space: nowrap;
+  font-size: 13px;
+  /* font-weight: 100; */
+  line-height: 1.6;
+}
+
+.menu {
+  display: flex;
+  color: white;
+
+  padding: 5px 10px;
+  border-right: 4px solid transparent;
+  transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  justify-content: space-between;
+}
+.menu_item {
+  display: flex;
+  gap: 10px;
+  /* font-size: 13px; */
+}
+.menu_container {
+  display: flex;
+  flex-direction: column;
+}
+.menu_container .link {
+  padding-left: 20px;
+  border-bottom: #fff 0.5px solid;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px; /* Change the width of the scrollbar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: red; /* Change the color of the thumb */
+  border-radius: 4px; /* Change the border radius of the thumb */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Change the color of the track */
+}
+
+.custom-loader {
+  --d: 11px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  color: #766df4;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0,
+    calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 0.5px,
+    calc(0 * var(--d)) calc(1 * var(--d)) 0 1px,
+    calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 1.5px,
+    calc(-1 * var(--d)) calc(0 * var(--d)) 0 2px,
+    calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 2.5px,
+    calc(0 * var(--d)) calc(-1 * var(--d)) 0 1px;
+  animation: s7 0.5s infinite steps(8);
+}
+
+@keyframes s7 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@media (min-width: 380px) {
+  .sidebar {
+    width: 200px; /* Set width for larger screens */
+  }
+}
+
+.engrave-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ring-photo {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.ring-photo img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.engrave-text {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translate(30%, 45%);
+  transform: rotate(-25deg);
+  font-size: 10px;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
