@@ -10,7 +10,7 @@ import { useDispatch } from "react-redux";
 import { addExpenses } from "../redux/services/expenseSlice";
 
 const Expense = () => {
-  const { isOpen, toggleDropdown, closeDropdown } = useDropdown();
+  const { isOpen, toggleDropdown } = useDropdown();
   const [selectedCategoryId, setSelectedCategoryId] = useState("");
   const { data } = useGetCategoryQuery();
   const categories = data?.category;

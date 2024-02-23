@@ -99,7 +99,7 @@ const SidebarMenu = ({ route, showAnimation, isOpen, setIsOpen }: any) => {
               </motion.div>
             ))}
           </motion.div>
-        )}{" "}
+        )}
       </AnimatePresence>
     </>
   );
